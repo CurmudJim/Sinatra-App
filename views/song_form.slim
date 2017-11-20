@@ -1,0 +1,14 @@
+form style=("width: 50%")
+  .form-group
+    label for="title" Title
+    input.form-control name="song[title]" placeholder=("Enter title") value="#{@song.title}" type="text" /
+  .form-group
+    label for="title" Length
+    input.form-control name="song[length]" type="number" value="#{@song.length}"/
+  .form-group
+    label Release Date:
+    input.form-control name="song[released_on]" type="date" value="#{@song.released_on}" /
+  .form-group
+    label Lyrics
+    textarea.form-control name="song[lyrics]" == @song.lyrics
+  button.btn.btn-primary type="submit"  Save Song

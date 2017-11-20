@@ -1,0 +1,39 @@
+doctype html
+html lang="en"
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    title= @title || "Songs By Sinatra"
+    meta charset="utf-8" /
+    link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" rel="stylesheet" /
+    link href="styles.css" rel="stylesheet" /
+  body
+    header
+      nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+        .container
+          a.navbar-brand href="/"
+            | Songs By Sinatra
+          button.navbar-toggler aria-controls="navbarNav" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarNav" data-toggle="collapse" type="button"
+            span.navbar-toggler-icon
+          #navbarNav.collapse.navbar-collapse
+            ul.navbar-nav
+              li.nav-item
+                a.nav-link href="/songs"  Songs
+              li.nav-item
+                a.nav-link href="/about"  About
+              li.nav-item
+                a.nav-link href="/contact"  Contact
+    section
+      .container
+        == yield
+      nav.navbar.fixed-bottom.navbar-light.bg-light
+        footer.container
+          p.float-right
+            a href="#"  Back to top
+          p
+            | © 2017 Company, Inc. ·
+            a href="#"  Privacy
+            | ·
+            a href="#"  Terms
+    script crossorigin="anonymous" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    script crossorigin="anonymous" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+    script crossorigin="anonymous" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
